@@ -4,6 +4,8 @@
   --accent-color: #66b454;
   --headings-color: #350000;
   --body-color: #644242;
+  --border-color: #bbb;
+  --border-radius: 2rem;
   --transition-btn: 0.3s;
 }
 
@@ -212,7 +214,7 @@ a {
 .btn--primary:hover,
 .btn--secondary:hover,
 .btn--accent:hover {
-  opacity: 0.9;
+  opacity: 0.8;
   color: #FFF;
 }
 
@@ -224,5 +226,40 @@ a {
 @media screen and (max-width: 1024px) {
   .btn {
     font-size: 1rem;
+  }
+}
+
+.input {
+  padding: 1.5rem 3.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: 0;
+  color: var(--headings-color);
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  color: #999;
+}
+
+.input-group {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.2rem 0.8rem;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 0.8rem;
   }
 }
