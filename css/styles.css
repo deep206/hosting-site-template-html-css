@@ -4,6 +4,7 @@
   --accent-color: #66b454;
   --headings-color: #350000;
   --body-color: #644242;
+  --body-dark-color: #3d2929;
   --border-color: #bbb;
   --border-radius: 2rem;
   --transition-btn: 0.3s;
@@ -159,6 +160,10 @@ a {
   fill: var(--primary-color);
 }
 
+.icon--white {
+  fill: white;
+}
+
 .icon-container {
   background: #c5d1e0;
   width: 4rem;
@@ -167,6 +172,10 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-container--accent {
+  background: var(--accent-color);
 }
 
 .btn {
@@ -348,5 +357,107 @@ a {
   
   .plan__description {
     font-size: 0.8rem;
+  }
+}
+
+.media {
+  display: flex;
+}
+
+.media__title {
+  margin-top: 0;
+}
+
+.media__body {
+  margin: 0 1.2rem;
+}
+
+.media__image {
+  margin-top: 1rem;
+}
+
+.quote {
+  font-size: 2.4rem;
+  font-style: italic;
+  color: var(--body-dark-color);
+  line-height: 1.2;
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__author {
+  font-style: normal;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.quote__profession {
+  opacity: 0.5;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 1.6rem;
+  }
+
+  .quote__author {
+    font-size: 1.8rem;
+  }
+
+  .quote__profession {
+    font-size: 1.2rem;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--col-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial {
+  padding: 2.4rem;
+}
+
+.testimonial__image-container {
+  position: relative;
+}
+
+.testimonial__image {
+  width: 100%;
+}
+
+.testimonial__image-container > .icon-container {
+  position: absolute;
+  top: 2.4rem;
+  right: -1.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote, .testimonial .quote__author {
+    font-size: 1.8rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 4.5rem;
   }
 }
