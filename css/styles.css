@@ -2,7 +2,7 @@
 	--primary-color: #52200a;
 	--secondary-color: #c26e3e;
 	--accent-color: #66b454;
-	--headings-color: #350000;
+	--headings-color: #af2525;
 	--body-color: #644242;
 	--body-dark-color: #3d2929;
 	--border-color: #bbb;
@@ -365,6 +365,7 @@ a {
 
 .grid {
 	display: grid;
+    grid-auto-flow: column;
 }
 
 @media screen and (min-width: 768px) {
